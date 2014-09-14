@@ -1,4 +1,6 @@
-/*Aufgabe Teil2:
+/*Name: Adnan Mahmud
+ *Personenkennzeichen: 1210258087 
+ * Aufgabe Teil2:
 Schreiben Sie ein Programm analog zu Teil 1, das den Umfang und die Fläche eines Rechtecks
 berechnet. Verwenden Sie dazu ein neues Masterfile!
 Lösungsweg:
@@ -17,6 +19,7 @@ double umfang,flaeche,seite_a,seite_b=0;
 
 int main(int argc, char **argv)
 {
+	
 	
 	printf("Enter value for a:\n");
 	scanf ("%lf",&seite_a);
