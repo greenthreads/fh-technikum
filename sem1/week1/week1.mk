@@ -5,7 +5,7 @@
 ## Debug
 ProjectName            :=week1
 ConfigurationName      :=Debug
-WorkspacePath          := "/home/adnan/.codelite/technikum"
+WorkspacePath          := "/home/adnan/.codelite/technikum/sem1"
 ProjectPath            := "/home/adnan/.codelite/technikum/sem1/week1"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
@@ -104,6 +104,6 @@ clean:
 	$(RM) ./Debug/*$(ObjectSuffix)
 	$(RM) ./Debug/*$(DependSuffix)
 	$(RM) $(OutputFile)
-	$(RM) "../../.build-debug/week1"
+	$(RM) "../.build-debug/week1"
 
 
