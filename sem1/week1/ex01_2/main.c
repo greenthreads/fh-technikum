@@ -20,12 +20,12 @@ werden.
 #include <stdio.h>
 double flaechedreieck (double a, double b);
 double volumenkeil (double seite_a, double seite_b, double breite);
-double seite_a,seite_b,breite,flaeche_dreieck, volumen_keil, volumen = 0;
+//double seite_a,seite_b,breite,flaeche_dreieck, volumen_keil, volumen = 0;
 
 
 int main(int argc, char **argv)
 {
-	
+	double seite_a, seite_b,breite,volumen=0;
 	
 	printf("Enter value for seite_a des Keils:\n");
 	scanf ("%lf",&seite_a);
@@ -42,15 +42,19 @@ int main(int argc, char **argv)
 
 double volumenkeil (double a, double b, double breite)
 {
+	double flaeche_dreieck,volumen_keil=0;
+	
 	flaeche_dreieck= flaechedreieck (a,b);
 	volumen_keil = flaeche_dreieck*breite;
 	return volumen_keil;
 	
 	}
 double flaechedreieck (double a, double b)
-{ll
-	flaeche_dreieck= (a*b)/2;
-	printf ("Die Fläche des Dreiecks Seitenlängen %f und %f beträgt: %f\n",a,b,flaeche_dreieck);
-	return flaeche_dreieck;
+{
+	double flaeche=0;
+	
+	flaeche= (a*b)/2;
+	printf ("Die Fläche des Dreiecks Seitenlängen %f und %f beträgt: %f\n",a,b,flaeche);
+	return flaeche;
 	
 	}
