@@ -27,11 +27,11 @@ int main(int argc, char **argv)
 {
 	
 	
-	printf("Enter value for seite_a des Kiels:\n");
+	printf("Enter value for seite_a des Keils:\n");
 	scanf ("%lf",&seite_a);
-	printf("Enter value for seite_b des Kiels:\n");
+	printf("Enter value for seite_b des Keils:\n");
 	scanf ("%lf",&seite_b);
-	printf("Enter value for breite des Kiels:\n");
+	printf("Enter value for breite des Keils:\n");
 	scanf ("%lf",&breite);
 	volumen=volumenkeil(seite_a,seite_b,breite);
 	
@@ -48,7 +48,7 @@ double volumenkeil (double a, double b, double breite)
 	
 	}
 double flaechedreieck (double a, double b)
-{
+{ll
 	flaeche_dreieck= (a*b)/2;
 	printf ("Die Fläche des Dreiecks Seitenlängen %f und %f beträgt: %f\n",a,b,flaeche_dreieck);
 	return flaeche_dreieck;
