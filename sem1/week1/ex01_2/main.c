@@ -49,6 +49,7 @@ double volumenkeil (double a, double b, double breite)
 	return volumen_keil;
 	
 	}
+
 double flaechedreieck (double a, double b)
 {
 	double flaeche=0;
@@ -56,5 +57,7 @@ double flaechedreieck (double a, double b)
 	flaeche= (a*b)/2;
 	printf ("Die Fläche des Dreiecks Seitenlängen %f und %f beträgt: %f\n",a,b,flaeche);
 	return flaeche;
+
 	
 	}
+	
