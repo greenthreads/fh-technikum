@@ -3,7 +3,7 @@
 #define MAX 100
 
 int addition ();
-void ausgabe (int top);
+int ausgabe (int top);
 
 int main(int argc, char* argv[])
 {
@@ -44,7 +44,7 @@ int addition ()
     return ergebnis;	
 }
 
-void ausgabe (int top) 
+int ausgabe (int top) 
 {
 	
     /* Deklaration und Definition des Arrays */
@@ -65,5 +65,5 @@ void ausgabe (int top)
 		printf ("zahlen_array[%d]: %d \n",j,zahlen_array[j]);
 		j=j+1;
 		}
-	
+	return 0;
 	}
