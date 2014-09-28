@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <math.h>
 
-double kapitalwert_allgemein (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, double betrachtungsdauer);
-double kapitalwert_speziell  (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, double betrachtungsdauer);
+int kapitalwert_allgemein (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, int betrachtungsdauer);
+int kapitalwert_speziell  (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, int betrachtungsdauer);
 
 int main(int argc, char* argv[])
 {
-	double kapitalwertallgemein = 0;
-	double kapitalwertspeziell = 0;
+	
+	
 	double investition = 0;
 	double cashflow = 0;
 	double liquidationserloes = 0;
 	double kalkulationszinssatz = 0;
-	double betrachtungsdauer = 0;
+	int betrachtungsdauer = 0;
 	
 	
 	printf("Investition (I): ");
@@ -24,21 +24,19 @@ int main(int argc, char* argv[])
 	printf("Kalkulationszinssatz (i): ");
 	scanf ("%lf",&kalkulationszinssatz);
 	printf("Betrachtungsdauer (T): ");
-	scanf ("%lf",&betrachtungsdauer);
+	scanf ("%d",&betrachtungsdauer);
 	
 
-    kapitalwertallgemein = 	kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
-	printf ("Kapitalwert (Allgemein) : %f\n", kapitalwertallgemein);
+    kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
+	kapitalwert_speziell (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
 	
-	kapitalwertspeziell = 	kapitalwert_speziell (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
-	printf ("Kapitalwert (Speziell) : %f\n", kapitalwertspeziell);
 	
 	return 0;
 }
 
-double kapitalwert_allgemein (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, double betrachtungsdauer)
+int kapitalwert_allgemein (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, int betrachtungsdauer)
   {
-	int result = 0;
+	double result = 0;
 	int count = 1;
     
 	for (count = 1; count<=betrachtungsdauer; count++)
@@ -46,14 +44,16 @@ double kapitalwert_allgemein (double investition, double cashflow, double liquid
 		result = result + (   ( cashflow * pow((1+Kalkulationszinssatz),-count) )  +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
 	   }
 		
-	return (result - investition);
+	result = result - investition;
+	printf ("Kapitalwert (Allgemein) : %f\n", result);
 	
+	return 0;
     }
 	
-double kapitalwert_speziell  (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, double betrachtungsdauer)
+int kapitalwert_speziell  (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, int betrachtungsdauer)
 
   {
-	int result = 0;
+	double result = 0;
 	int count = 0;
 	
 	for (count = 1; count<=betrachtungsdauer; count++)
@@ -62,6 +62,8 @@ double kapitalwert_speziell  (double investition, double cashflow, double liquid
 		                +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
 	   }
 		
-	return (result - investition);
-	  
+	result= result - investition;
+	printf ("Kapitalwert (Speziell) : %f\n", result);  
+    
+	return 0;
    }
