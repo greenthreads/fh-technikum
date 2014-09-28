@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 	
 	printf("Investition (I): ");
 	scanf ("%lf",&investition);
-    printf("Cashflow (Rt): ");
+        printf("Cashflow (Rt): ");
 	scanf ("%lf",&cashflow);
 	printf("Lquidationserloes (L): ");
 	scanf ("%lf",&liquidationserloes);
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	scanf ("%d",&betrachtungsdauer);
 	
 
-    kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
+        kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
 	kapitalwert_speziell (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
 	
 	
@@ -40,7 +40,7 @@ int kapitalwert_allgemein (double investition, double cashflow, double liquidati
 	int count = 1;
     
 	for (count = 1; count<=betrachtungsdauer; count++)
-      {
+          {
 		result = result + (   ( cashflow * pow((1+Kalkulationszinssatz),-count) )  +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
 	   }
 		
@@ -57,7 +57,7 @@ int kapitalwert_speziell  (double investition, double cashflow, double liquidati
 	int count = 0;
 	
 	for (count = 1; count<=betrachtungsdauer; count++)
-      {
+         {
 		result = result + (   ( cashflow * (pow((1+Kalkulationszinssatz),betrachtungsdauer)-1) / (pow((1+Kalkulationszinssatz),betrachtungsdauer)*Kalkulationszinssatz) )  
 		                +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
 	   }
