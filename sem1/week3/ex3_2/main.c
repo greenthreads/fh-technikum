@@ -54,7 +54,7 @@ int kapitalwert_speziell  (double investition, double cashflow, double liquidati
 
   {
 	double result = 0;
-	int count = 0;
+	int count = 1;
 	
 	for (count = 1; count<=betrachtungsdauer; count++)
          {
