@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 	
 	printf("Investition (I): ");
 	scanf ("%lf",&investition);
-        printf("Cashflow (Rt): ");
+	printf("Cashflow (Rt): ");
 	scanf ("%lf",&cashflow);
 	printf("Lquidationserloes (L): ");
 	scanf ("%lf",&liquidationserloes);
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
 	scanf ("%d",&betrachtungsdauer);
 	
 
-        kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
+	kapitalwert_allgemein (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
 	kapitalwert_speziell (investition,cashflow,liquidationserloes,kalkulationszinssatz,betrachtungsdauer);
 	
 	
@@ -37,12 +37,12 @@ int main(int argc, char* argv[])
 int kapitalwert_allgemein (double investition, double cashflow, double liquidationserloes, double Kalkulationszinssatz, int betrachtungsdauer)
   {
 	double result = 0;
-	int count = 1;
+	int t = 1;
     
-	for (count = 1; count<=betrachtungsdauer; count++)
-          {
-		result = result + (   ( cashflow * pow((1+Kalkulationszinssatz),-count) )  +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
-	   }
+	for (t = 1; t<=betrachtungsdauer; t++)
+	   {
+		  result = result + (   ( cashflow * pow((1+Kalkulationszinssatz),-t) )  +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
+	    }
 		
 	result = result - investition;
 	printf ("Kapitalwert (Allgemein) : %f\n", result);
@@ -54,13 +54,10 @@ int kapitalwert_speziell  (double investition, double cashflow, double liquidati
 
   {
 	double result = 0;
-	int count = 1;
 	
-	for (count = 1; count<=betrachtungsdauer; count++)
-         {
-		result = result + (   ( cashflow * (pow((1+Kalkulationszinssatz),betrachtungsdauer)-1) / (pow((1+Kalkulationszinssatz),betrachtungsdauer)*Kalkulationszinssatz) )  
+	result = result + (   ( cashflow * (pow((1+Kalkulationszinssatz),betrachtungsdauer)-1) / (pow((1+Kalkulationszinssatz),betrachtungsdauer)*Kalkulationszinssatz) )  
 		                +    ( liquidationserloes * pow((1+Kalkulationszinssatz),-betrachtungsdauer) )   ) ;
-	   }
+	
 		
 	result= result - investition;
 	printf ("Kapitalwert (Speziell) : %f\n", result);  
