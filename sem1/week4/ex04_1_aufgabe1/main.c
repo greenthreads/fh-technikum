@@ -22,6 +22,7 @@ int main(int argc, char **argv)
 	const double b = 5.0;
 	
 	for (i=0;i<5;i++)
+	
 	{
 	
     printf("===========\n");	
@@ -31,14 +32,14 @@ int main(int argc, char **argv)
     printf("Enter the value for a: ");
 	scanf ("%lf",&a);
 	
-	addition(a,b);
-	division(a,b);
-	modulo (a,b);
-	potential(a);
+	addition  (a,b);
+	division  (a,b);
+	modulo    (a,b);
+	potential (a);
 	
 	if (i==4) printf ("Goodbye\n") ;
-	
 	}
+	
 	return 0;
 }
 
@@ -57,13 +58,13 @@ void division (double value1 , double value2)
     
 	if (value1 !=0)
 	
-	 {
-	    ergebnis = value2/value1;
-	    printf ("[b/a] %f/%f is = %f \n",value2,value1,ergebnis);
-	  }
+	   {
+	     ergebnis = value2/value1;
+	     printf ("[b/a] %f/%f is = %f \n",value2,value1,ergebnis);
+	   }
     
 	else 
-	    printf ("ERROR: Divide by Zero Error. The value of \"a\" is %f \n",value1);
+	     printf ("ERROR: Divide by Zero Error. The value of \"a\" is %f \n",value1);
 	   
 }
 
@@ -78,10 +79,9 @@ void modulo (double value1 , double value2)
 void  potential (double value1)
 {
 	double ergebnis = 0.0;
+	
     ergebnis = pow(value1,2);
 	printf ("[a*a] %f*%f is = %f \n\n",value1,value1,ergebnis);
-	
-	
 }
 
 void cls()
