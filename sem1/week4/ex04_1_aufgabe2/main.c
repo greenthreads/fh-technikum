@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 }
 
 
-//die ganz kleine nachkommastellen verschwinden. 
+//die ganz kleinen nachkommastellen verschwinden. 
 //ToDo: Warum verschwinden sie? 
 //      wie kann man präziser rechnen?
 
