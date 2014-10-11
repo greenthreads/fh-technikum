@@ -1,8 +1,7 @@
+/* Adnan Mahmud, ic12b087 */
 #include <stdio.h>
 
-
-
-int main(int argc, char **argv)
+int main(int argc, char* argv[])
 {
 	
 int i=0;
