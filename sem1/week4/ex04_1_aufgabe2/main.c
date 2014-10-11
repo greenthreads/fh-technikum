@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 {
 	double i = 0.0000000000001;
 	double j = 100000000000000;
-	printf("Summe ist: %f \n",i+j);
+	printf("Summe ist: %.24f \n",i+j);
 	return 0;
 }
 
