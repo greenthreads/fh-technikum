@@ -16,23 +16,22 @@ int main(int argc, char **argv)
 	
 	for (i=0;i<LIMIT;i++)
 	{
-	  printf ("%3d ",horizontal[i]);
+	   printf ("%3d ",horizontal[i]);
 	 }
 	
-	  printf("\n");
+	printf("\n");
 	
 	for (j=0;j<LIMIT;j++)
-    {
-      printf ("%3d ",vertical[j]);
+        {
+           printf ("%3d ",vertical[j]);
+        
           for (k=0;k<10;k++)
           {
            printf ("%3d ",vertical[j]*horizontal[k]);
           }
-	  printf ("\n");
-     }
 	
+           printf ("\n");
+        }
 	
-	
-	
-	return 0;
+return 0;
 }
