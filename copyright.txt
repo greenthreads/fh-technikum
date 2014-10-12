@@ -1,0 +1,4 @@
+/* @ Author: Adnan Mahmud 
+   @ Institut: FH Technikum Wien
+   @ Personalkennzeichen: ic12b087
+   @ Gruppe: 1B1 */
