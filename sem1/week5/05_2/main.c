@@ -1,3 +1,5 @@
+
+/* Adnan Mahmud, ic12b087 */
 #include <stdio.h>
 #define LIMIT 10
 
@@ -19,7 +21,7 @@ int main(int argc, char **argv)
 	
 	  printf("\n");
 	
-	for (j=0;j<10;j++)
+	for (j=0;j<LIMIT;j++)
     {
       printf ("%3d ",vertical[j]);
           for (k=0;k<10;k++)
