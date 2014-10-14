@@ -1,20 +1,25 @@
 #include <stdio.h>
 #define LIMIT 32
 
-void rechne_binaer(int input);
+void rechne(int input, int basis);
 
 int main(int argc, char **argv)
 {
 	int eingabe=0;
+	int basis=0;
 		
 	printf("Eingabe: ");
 	scanf ("%d",&eingabe);
 	
-    rechne_binaer(eingabe);	
+	printf("Basis: ");
+	scanf ("%d",&basis);
+	
+    rechne(eingabe,basis);
+
 	return 0;
 }
 
-void rechne_binaer(int input)
+void rechne(int input,int basis)
 {
    
    int myArray[LIMIT]={};
@@ -23,8 +28,8 @@ void rechne_binaer(int input)
    
    do
    {
-     myArray[i++]=input%2;
-     input=input/2;
+     myArray[i++]=input%basis;
+     input=input/basis;
    }while (input !=0);
    
    for(j=LIMIT-1;j>=0;j--)
