@@ -33,7 +33,12 @@ void rechne(int input,int basis)
    }while (input !=0);
    
    for(j=LIMIT-1;j>=0;j--)
-	 printf("%d",myArray[j]);   
-	
+	   
+	   {
+		if (myArray[j]<10   )
+	    printf("%d",myArray[j]);
+        else
+		printf ("%c",myArray[j]+55);
+	   }
 	 printf ("\n");
 }
