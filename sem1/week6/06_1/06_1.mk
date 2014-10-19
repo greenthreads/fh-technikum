@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=06_2
+ProjectName            :=06_1
 ConfigurationName      :=Debug
 WorkspacePath          := "/home/adnan/.codelite/technikum/sem1/week6"
-ProjectPath            := "/home/adnan/.codelite/technikum/sem1/week6/06_2"
+ProjectPath            := "/home/adnan/.codelite/technikum/sem1/week6/06_1"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="06_2.txt"
+ObjectsFileList        :="06_1.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
@@ -90,7 +90,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/home/adnan/.codelite/technikum/sem1/week6/06_2/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/home/adnan/.codelite/technikum/sem1/week6/06_1/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM "main.c"
 
@@ -106,6 +106,6 @@ clean:
 	$(RM) ./Debug/*$(ObjectSuffix)
 	$(RM) ./Debug/*$(DependSuffix)
 	$(RM) $(OutputFile)
-	$(RM) "../.build-debug/06_2"
+	$(RM) "../.build-debug/06_1"
 
 
