@@ -13,7 +13,7 @@ int main(int argc, char* argv[])
 	printf("Geben Sie Ihr Brutto-Einkommen ein: ");
 	scanf("%lf",&brutto_einkommen);
 	
-	printf ("Ihr Einkommensteuer Beträgt: %.2f\n", einkommensteuer(brutto_einkommen));
+	printf ("Ihr Einkommensteuer beträgt: %.2f\n", einkommensteuer(brutto_einkommen));
 	return 0;
 }
 
