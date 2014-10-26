@@ -31,19 +31,15 @@ int main(int argc, char **argv)
 	for (i=2;i<=k-1;i++)
 	{
 	    if (k%i==0)
-		   {
-			   //printf ("Die Zahl %d ist keine Primzahl\n",k);
-			   break;
-			}
-		
+	    break;
 	}
 	
 	    if (i==k)
-		printf ("Die Zahl %d ist eine Primzahl\n",k);
+	    printf ("Die Zahl %d ist eine Primzahl\n",k);
 		
-		if (k==end)	
-        printf ("das obere Limit: %d\n",end);	
-	}
+	    if (k==end)	
+            printf ("das obere Limit: %d\n",end);	
+     }
 
     	
 	return 0;
