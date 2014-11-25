@@ -19,6 +19,6 @@ double oberflaeche_quader(double a, double b, double c)
 double flaeche_rechteck(double a, double b)
 {   
 	static int i=0;
-	printf("flaeche_rechteck wurde  %d mal aufgerufen", ++i);
+	printf("flaeche_rechteck wurde  %d mal aufgerufen\n", ++i);
 	return (a*b);
 }
