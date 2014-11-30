@@ -1,7 +1,7 @@
 #include "myheader.h"
 
 
-extern double volumen_quader(double a,double b,double c)
+double volumen_quader(double a,double b,double c)
 {
 	return (flaeche_rechteck(a,b)*c);
 }
