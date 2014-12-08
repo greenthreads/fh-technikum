@@ -1,3 +1,0 @@
-export CodeLiteDir=/usr/share/codelite
-export CXX=g++
-export CC=gcc
