@@ -1,3 +1,7 @@
+/* @ Author: Adnan Mahmud 
+   @ Institut: FH Technikum Wien
+   @ Personalkennzeichen: ic12b087
+   @ Gruppe: 1B1 */
 #include <stdio.h>
 #include <string.h>
 #include "stringlength.h"
