@@ -34,17 +34,18 @@ int main(int argc, char* argv[])
 
 int *allocate_int_array(int length)
 {
-	int *p_iaData=NULL;
+	int *myData=NULL;
 	if (length>0)
 	{
-		if (!(p_iaData=(int*)malloc((sizeof(int)*length))) )
+		if (!(myData=(int*)malloc((sizeof(int)*length))) )
 		{
 			printf("Not enough memory\n");
+			myData=NULL;
+			
 		}
 		
-		
-	}
-     return p_iaData;
+	 }
+     return myData;
 }
 
 void fill_with_fibonacci_sequence(int *data, int length)
